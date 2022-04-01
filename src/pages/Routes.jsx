@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Login from './Login';
 import Wallet from './Wallet';
+import Login from './Login';
 
 class Routes extends React.Component {
   render() {
