@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import fetchCurrencies from '../service/fetchCurrencies';
 import { actionExpenses } from '../actions';
 import './FormExpenses.css';
@@ -34,7 +34,7 @@ class FormExpenses extends React.Component {
     const fetchAPI = await fetchCurrencies();
     const { id, value, description, currency, method, tag } = this.state;
     this.setState({
-      expenses: {
+      expenses: { // atualiza o state expenses, com os valores do estado global.
         id,
         value,
         description,
@@ -46,6 +46,14 @@ class FormExpenses extends React.Component {
     }, () => {
       const { expenses } = this.state;
       expensesEvent(expenses);
+      this.setState((preview) => ({
+        id: preview.id + 1,
+        value: '',
+        description: '',
+        currency: 'USD',
+        method: 'Dinheiro',
+        tag: tagAlimentacao,
+      }));
     });
   }
 
