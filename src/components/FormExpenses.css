@@ -4,13 +4,8 @@
   padding: 0;
 }
 
-form {
+.coin {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 50px;
-}
-
-button {
-  height: 22px;
-  width: 50px;
 }

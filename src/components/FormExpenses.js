@@ -1,19 +1,69 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import fetchCurrencies from '../service/fetchCurrencies';
+import { actionExpenses } from '../actions';
+import './FormExpenses.css';
+
+const tagAlimentacao = 'Alimentação';
 
 class FormExpenses extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      id: 0,
+      value: '',
+      description: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: tagAlimentacao,
+      expenses: {},
+    };
+  }
+
+  handleSave = ({ target }) => {
+    const { name, value } = target;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleClick = async () => {
+    const { expensesEvent } = this.props;
+    const fetchAPI = await fetchCurrencies();
+    const { id, value, description, currency, method, tag } = this.state;
+    this.setState({
+      expenses: {
+        id,
+        value,
+        description,
+        currency,
+        method,
+        tag,
+        exchangeRates: fetchAPI,
+      },
+    }, () => {
+      const { expenses } = this.state;
+      expensesEvent(expenses);
+    });
+  }
+
   render() {
     const { currencies } = this.props;
+    const { value, description, currency, method, tag } = this.state;
     return (
       <form>
-        <div>
+        <div className="coin">
           <label htmlFor="value-input">
             Valor
             <input
               type="text"
               data-testid="value-input"
               id="value-input"
+              value={ value }
+              name="value"
+              onChange={ this.handleSave }
             />
           </label>
 
@@ -23,6 +73,9 @@ class FormExpenses extends React.Component {
               type="text"
               data-testid="description-input"
               id="description-input"
+              value={ description }
+              name="description"
+              onChange={ this.handleSave }
             />
           </label>
 
@@ -30,10 +83,13 @@ class FormExpenses extends React.Component {
             Moeda
             <select
               id="currency"
+              value={ currency }
+              name="currency"
+              onChange={ this.handleSave }
             >
               {
-                currencies.map((currency, index) => (
-                  <option key={ index } value={ currency }>{currency}</option>
+                currencies.map((coin, index) => (
+                  <option key={ index } value={ coin }>{coin}</option>
                 ))
               }
             </select>
@@ -44,6 +100,9 @@ class FormExpenses extends React.Component {
             <select
               data-testid="method-input"
               id="method-pay"
+              value={ method }
+              name="method"
+              onChange={ this.handleSave }
             >
               <option name="dinheiro">Dinheiro</option>
               <option name="credito">Cartão de crédito</option>
@@ -56,6 +115,9 @@ class FormExpenses extends React.Component {
             <select
               data-testid="tag-input"
               id="tag-input"
+              value={ tag }
+              name="tag"
+              onChange={ this.handleSave }
             >
               <option name="alimentacao">Alimentação</option>
               <option name="lazer">Lazer</option>
@@ -64,6 +126,14 @@ class FormExpenses extends React.Component {
               <option name="saude">Saúde</option>
             </select>
           </label>
+
+          <button
+            type="button"
+            onClick={ this.handleClick }
+          >
+            Adicionar despesa
+          </button>
+
         </div>
       </form>
     );
@@ -74,8 +144,13 @@ const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
 });
 
-export default connect(mapStateToProps)(FormExpenses);
+const mapDispatchToProps = (dispatch) => ({
+  expensesEvent: (value) => dispatch(actionExpenses(value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormExpenses);
 
 FormExpenses.propTypes = {
   currencies: PropTypes.string,
+  expensesEvent: PropTypes.func,
 }.isRequired;
