@@ -90,6 +90,7 @@ class FormExpenses extends React.Component {
           <label htmlFor="currency">
             Moeda
             <select
+              data-testid="currency-input"
               id="currency"
               value={ currency }
               name="currency"
