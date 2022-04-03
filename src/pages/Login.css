@@ -19,6 +19,7 @@ body {
   justify-content: space-evenly;
   margin: 200px auto;
   margin-top: 15%;
+  text-align: center;
   width: 400px;
 }
 
@@ -28,6 +29,7 @@ body {
   height: 25px;
   margin: 5px;
   padding: 10px;
+  text-align: center;
   width: 250px;
 }
 
