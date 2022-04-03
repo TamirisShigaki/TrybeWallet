@@ -4,16 +4,37 @@
   padding: 0;
 }
 
-form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  justify-content: space-evenly;
-  margin-top: 50px;
+body {
+  background-color: rgb(83, 98, 113);
 }
 
-button {
-  height: 22px;
-  width: 50px;
+.form {
+  align-items: center;
+  background-image: url('https://www.proteste.org.br/-/media/proteste/images/home/dinheiro/cambio/pim-cambio.jpg?rev=0b724b00-a190-40f9-8ad5-d9752e120404');
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-evenly;
+  margin: 200px auto;
+  margin-top: 15%;
+  width: 400px;
+}
+
+.pag-login {
+  border: white;
+  border-radius: 5px;
+  height: 25px;
+  margin: 5px;
+  padding: 10px;
+  width: 250px;
+}
+
+.btn-login {
+  background-color: rgb(3, 58, 58);
+  border-radius: 5px;
+  color: aliceblue;
+  height: 30px;
+  width: 60px;
 }

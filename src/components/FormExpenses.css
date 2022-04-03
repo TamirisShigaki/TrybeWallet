@@ -4,8 +4,40 @@
   padding: 0;
 }
 
-.coin {
+.form-expenses {
+  align-items: center;
+  background-color: rgb(106, 104, 122);
+  color: rgb(252, 247, 247);
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+  font-size: 16px;
+  height: 80px;
+  justify-content: space-evenly;
+  text-align: center;
+
+}
+
+.expenses-form {
+  align-items: center;
+  background-color: rgb(177, 175, 175);
+  border-color: rgb(177, 175, 175);
+  border-radius: 5px;
+  color: rgb(8, 8, 8);
+  display: flex;
+  height: 40px;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100px;
+}
+
+.expenses-form1 {
+  align-items: center;
+  background-color: rgb(177, 175, 175);
+  border-color: rgb(177, 175, 175);
+  border-radius: 5px;
+  color: rgb(8, 8, 8);
+  display: flex;
+  height: 40px;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 125px;
 }

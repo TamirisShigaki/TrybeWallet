@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteExpense } from '../actions';
+import './Table.css';
 
 class Table extends React.Component {
   render() {
     const { expenses, expenseDelete } = this.props;
     return (
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Descrição</th>
@@ -21,7 +22,8 @@ class Table extends React.Component {
             <th>Editar/Excluir</th>
           </tr>
         </thead>
-        <tbody>
+
+        <tbody className="item-table">
           {
             expenses.map((expense) => {
               const { id,
@@ -46,6 +48,15 @@ class Table extends React.Component {
                   <td>{ converter }</td>
                   <td>Real</td>
                   <td>
+                    <button
+                      data-testid="edit-btn"
+                      type="button"
+                      name="edit-btn"
+                      id="edit-btn"
+                      // onClick={}
+                    >
+                      Editar
+                    </button>
                     <button
                       data-testid="delete-btn"
                       type="button"

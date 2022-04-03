@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.table {
+  align-items: center;
+  background-color: rgb(132, 130, 143);
+  color: rgb(252, 247, 247);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+

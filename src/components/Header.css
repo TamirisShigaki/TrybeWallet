@@ -4,7 +4,16 @@
   padding: 0;
 }
 
-header {
-  line-height: 1.5;
-  margin: 20px;
+.header {
+  align-items: center;
+  background-color: rgb(83, 98, 113);
+  color: rgb(252, 247, 247);
+  display: flex;
+  height: 60px;
+  justify-content: flex-end;
+}
+
+.span-header {
+  font-size: 14px;
+  margin: 80px;
 }

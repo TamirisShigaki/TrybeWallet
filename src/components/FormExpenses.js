@@ -62,10 +62,11 @@ class FormExpenses extends React.Component {
     const { value, description, currency, method, tag } = this.state;
     return (
       <form>
-        <div className="coin">
+        <div className="form-expenses">
           <label htmlFor="value-input">
-            Valor
+            Valor:
             <input
+              className="expenses-form"
               type="text"
               data-testid="value-input"
               id="value-input"
@@ -76,8 +77,9 @@ class FormExpenses extends React.Component {
           </label>
 
           <label htmlFor="description-input">
-            Descrição
+            Descrição:
             <input
+              className="expenses-form"
               type="text"
               data-testid="description-input"
               id="description-input"
@@ -88,8 +90,9 @@ class FormExpenses extends React.Component {
           </label>
 
           <label htmlFor="currency">
-            Moeda
+            Moeda:
             <select
+              className="expenses-form"
               data-testid="currency-input"
               id="currency"
               value={ currency }
@@ -105,8 +108,9 @@ class FormExpenses extends React.Component {
           </label>
 
           <label htmlFor="method-pay">
-            Forma de Pagamento
+            Forma de Pagamento:
             <select
+              className="expenses-form1"
               data-testid="method-input"
               id="method-pay"
               value={ method }
@@ -120,8 +124,9 @@ class FormExpenses extends React.Component {
           </label>
 
           <label htmlFor="tag-input">
-            Categoria
+            Categoria:
             <select
+              className="expenses-form"
               data-testid="tag-input"
               id="tag-input"
               value={ tag }
@@ -137,6 +142,7 @@ class FormExpenses extends React.Component {
           </label>
 
           <button
+            className="expenses-form"
             type="button"
             onClick={ this.handleClick }
           >
