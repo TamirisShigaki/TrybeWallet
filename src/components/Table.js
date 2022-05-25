@@ -23,7 +23,7 @@ class Table extends React.Component {
           </tr>
         </thead>
 
-        <tbody className="item-table">
+        <tbody>
           {
             expenses.map((expense) => {
               const { id,
@@ -38,7 +38,7 @@ class Table extends React.Component {
               const currencyName = exchangeRates[currency].name.split('/');
               const cambio = exchangeRates[currency].ask;
               return (
-                <tr key={ id }>
+                <tr key={ id } className="item-table">
                   <td>{ description }</td>
                   <td>{ tag }</td>
                   <td>{ method }</td>
