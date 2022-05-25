@@ -6,7 +6,7 @@
 
 .form-expenses {
   align-items: center;
-  background-color: rgb(106, 104, 122);
+  background-color: rgb(223, 143, 15);
   color: rgb(252, 247, 247);
   display: flex;
   font-size: 16px;
@@ -18,8 +18,8 @@
 
 .expenses-form {
   align-items: center;
-  background-color: rgb(177, 175, 175);
-  border-color: rgb(177, 175, 175);
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(229, 229, 229);
   border-radius: 5px;
   color: rgb(8, 8, 8);
   display: flex;
@@ -31,8 +31,8 @@
 
 .expenses-form1 {
   align-items: center;
-  background-color: rgb(177, 175, 175);
-  border-color: rgb(177, 175, 175);
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(229, 229, 229);
   border-radius: 5px;
   color: rgb(8, 8, 8);
   display: flex;
