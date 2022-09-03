@@ -23,7 +23,7 @@ A `Tela de despesas` conta com 5 campos sendo eles:
 
 `Valor da despesa` ⇾ nesse campo colocamos o valor gasto com essa despesa.<br>
 `Descrição da despesa` ⇾ nesse campo colocamos onde tivemos esse gasto.<br>
-`Moeda` -> nesse campo escolhemos qual moeda utilizamos para realizar o pagamento da despesa.<br>
+`Moeda` ⇾ nesse campo escolhemos qual moeda utilizamos para realizar o pagamento da despesa.<br>
 `Método de pagamento` ⇾ nesse campo escolhemos qual foi o método utilizado para realizar o pagamento.<br>
 `Categoria` ⇾ nesse campo escolhemos uma categoria que representa qual tipo de gasto tivemos.<br>
 
@@ -47,7 +47,7 @@ A `Tabela` conta com 9 categorias sendo elas:
 ### Botões Excluir
 Cada despesa conta com dois botões sendo eles:
  
-`Excluir` -> ao clicar no botão `excluir` a despesa a qual o botão esta atribuído é removida da lista.<br>
+`Excluir` ⇾ ao clicar no botão `excluir` a despesa a qual o botão esta atribuído é removida da lista.<br>
 
 ![img](src/image/excluir.gif)
 
