@@ -74,3 +74,8 @@ npm install
   ``` bash
   npm start
   ```
+
+
+## Conheça mais a aplicação
+
+* <a href="https://trybe-wallet-coral.vercel.app/" target="_blank" rel="external"><span><strong>Deploy da aplicação</strong></span></a>.
